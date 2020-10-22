@@ -1,0 +1,37 @@
+﻿@model WebApplication3.Models.CalcM 
+
+@{
+    ViewData["Title"] = "Home Page";
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Halim's Calculator</title>
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">My Calculator</h1>
+    <p>Learn about <a href="https://www.sber.ru">Sber</a>.</p>
+</div>
+
+<body>
+    <form action="Calc" method="post">
+        Number 1:
+        <input type="text" name="Number1" value="@Model.Number1" />
+        <br />
+        Number 2:
+        <input type="text" name="Number2" value="@Model.Number2" />
+        <br />
+        @Model.Number1 @Model.Op @Model.Number2 = @Model.Result;
+        <br />
+        <input type="submit" name="Op" value="+" />
+        <input type="submit" name="Op" value="-" />
+        <input type="submit" name="Op" value="*" />
+        <input type="submit" name="Op" value="/" />
+    </form>
+</body>
+</html>
